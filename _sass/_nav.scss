@@ -1,0 +1,42 @@
+.site-nav {
+  position: fixed;
+  width: 100%;
+  padding: 30px 40px 25px;
+  text-align: center;
+
+  @include breakpoint(one-hand) {
+    padding: 20px 20px 10px;
+  }
+}
+
+.site-nav--list {
+  margin: 3px 0;
+}
+
+.site-nav--item {
+  display:inline-block;
+  font-size:$type-5;
+
+  &.logo a {
+    border: 3px solid $black;
+    padding: 8px;
+  }
+
+  &:last-child {
+    border-right: none;
+    @include breakpoint(one-hand) {
+      .site-nav--link {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.site-nav--link {
+  letter-spacing: 2px;
+  display:block;
+  padding-right: 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+}

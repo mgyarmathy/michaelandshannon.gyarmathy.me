@@ -1,0 +1,66 @@
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+::selection {
+  background: $grey-light; /* Safari */
+}
+
+::-moz-selection {
+  background: $grey-light; /* Firefox */
+}
+
+section {
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.home {
+  height: 100vh;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.25) 20%), url('/img/ShannonMichael7219.jpg');
+  background-position: center -18%;
+  background-color: $black;
+  position: relative;
+
+  .header {
+    width: 100%;
+    color: $white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+  }
+
+  .content {
+    width: 100%;
+    color: $white;
+    position: absolute;
+    bottom: 10%;
+    text-transform: uppercase;
+  }
+}
+
+.story {
+
+}
+
+.save-the-date {
+
+}
+
+.wedding {
+  background-image: url('/img/thelaurel-traceyenochphotography.jpg');
+}
+
+.accomodations {
+
+}
+
+.registry {
+
+}
+
+.footer {
+  background-image: url('/img/ShannonMichael7258.jpg');
+}
