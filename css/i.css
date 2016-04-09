@@ -853,19 +853,20 @@ h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: .25em; }
 
 h1, .h1 {
-  font-size: 96px; }
+  font-size: 64px;
+  text-transform: uppercase; }
   @media screen and (min-width: 100px) and (max-width: 479px) {
     h1, .h1 {
-      font-size: 64px; } }
+      font-size: 44px; } }
 
 h2, .h2 {
-  font-size: 64px; }
+  font-size: 44px; }
   @media screen and (min-width: 100px) and (max-width: 479px) {
     h2, .h2 {
-      font-size: 32px; } }
+      font-size: 24px; } }
 
 h3, .h3 {
-  font-size: 32px; }
+  font-size: 24px; }
   @media screen and (min-width: 100px) and (max-width: 479px) {
     h3, .h3 {
       font-size: 24px; } }
@@ -888,7 +889,7 @@ p {
     margin-top: 1em; }
 
 .intro {
-  font-size: 32px; }
+  font-size: 24px; }
 
 .meta {
   font-size: 16px; }
@@ -897,7 +898,7 @@ blockquote {
   padding: 1em 0 1.75em 0;
   font-style: italic; }
   blockquote p {
-    font-size: 32px; }
+    font-size: 24px; }
   @media screen and (min-width: 100px) and (max-width: 479px) {
     blockquote {
       padding: 0.5em 0;
@@ -912,7 +913,7 @@ em {
   font-style: italic; }
 
 .bump-it {
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 1em; }
 
 .author {
@@ -1032,19 +1033,21 @@ a {
   /* Firefox */ }
 
 section {
-  min-height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  padding-top: 4em;
+  padding-bottom: 4em; }
 
 .home {
   height: 100vh;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(20%, rgba(0, 0, 0, 0.25))), url("/img/ShannonMichael7219.jpg");
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.25) 20%), url("/img/ShannonMichael7219.jpg");
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.25) 20%), url("/img/ShannonMichael7219.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(20%, rgba(0, 0, 0, 0.4))), url("/img/ShannonMichael7219.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) 20%), url("/img/ShannonMichael7219.jpg");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) 20%), url("/img/ShannonMichael7219.jpg");
   background-position: center -18%;
   background-color: #2e2e2e;
-  position: relative; }
+  position: relative;
+  padding: 0; }
   .home .header {
     width: 100%;
     color: #ffffff;
@@ -1058,8 +1061,38 @@ section {
     bottom: 10%;
     text-transform: uppercase; }
 
+.story {
+  background-color: #FFFFFA; }
+  .story h3 {
+    color: #FF6060; }
+
+.save-the-date {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(198, 236, 235, 0.35)), color-stop(50%, rgba(198, 236, 235, 0.35))), url("/img/xv.png");
+  background-image: -webkit-linear-gradient(top, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
+  background-image: linear-gradient(180deg, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: inherit; }
+
 .wedding {
-  background-image: url("/img/thelaurel-traceyenochphotography.jpg"); }
+  background-color: #FFFFFA; }
+  .wedding h2 {
+    color: #FF6060; }
+
+.accommodations {
+  background-color: #FFDFDF; }
+
+.registry {
+  background-color: #FFFFFA; }
+
+.card {
+  background-color: #FFFFFA;
+  padding: 3em;
+  -webkit-box-shadow: 0px 1px 5px 0px #777777;
+          box-shadow: 0px 1px 5px 0px #777777; }
 
 .footer {
-  background-image: url("/img/ShannonMichael7258.jpg"); }
+  background-image: url("/img/ShannonMichael7258.jpg");
+  min-height: 200px; }

@@ -11,18 +11,21 @@
 }
 
 section {
-  min-height: 400px;
+  // min-height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 
 .home {
   height: 100vh;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.25) 20%), url('/img/ShannonMichael7219.jpg');
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) 20%), url('/img/ShannonMichael7219.jpg');
   background-position: center -18%;
   background-color: $black;
   position: relative;
+  padding: 0;
 
   .header {
     width: 100%;
@@ -42,25 +45,45 @@ section {
 }
 
 .story {
-
+  background-color: $ivory;
+  // background-image: linear-gradient(180deg, rgba($watermelon-light, 0.35), rgba($watermelon-light, 0.35) 50%), url('/img/honey_im_subtle.png');
+  // background-repeat: repeat;
+  // background-size: auto;
+  // background-attachment: inherit;
+  h3 { color: $watermelon; }
 }
 
 .save-the-date {
-
+  padding-top: 6em;
+  padding-bottom: 6em;
+  background-image: linear-gradient(180deg, rgba($seaglass, 0.35), rgba($seaglass, 0.35) 50%), url('/img/xv.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: inherit;
 }
 
 .wedding {
-  background-image: url('/img/thelaurel-traceyenochphotography.jpg');
+  background-color: $ivory;
+  h2 { color: $watermelon; }
+  // background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 20%), url('/img/thelaurel-traceyenochphotography.jpg');
+  // color: $white;
 }
 
-.accomodations {
-
+.accommodations {
+  background-color: $watermelon-light;
 }
 
 .registry {
+  background-color: $ivory;
+}
 
+.card {
+  background-color: $ivory;
+  padding: 3em;
+  box-shadow: 0px 1px 5px 0px rgba(119,119,119,1);
 }
 
 .footer {
   background-image: url('/img/ShannonMichael7258.jpg');
+  min-height: 200px;
 }
