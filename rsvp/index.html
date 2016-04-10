@@ -29,7 +29,7 @@
                     <span class="label-body">Regrets</span>
                   </label>
                   <input type="text" name="_gotcha" style="display:none" />
-                  <input type="submit" class="button-primary" style="width: 50%; margin-top: 20px;">
+                  <input id="formSubmit" type="submit" class="button-primary" style="width: 50%; margin-top: 20px;">
                 </form>
                 <p class="response" id="success" style="display:none;">Your RSVP was sent successfully! Redirecting you back to the site...</p>
                 <p class="response" id="failure" style="display:none;">Your RSVP failed to send. Please try again!</p>
@@ -51,6 +51,7 @@
 
     var frm = $('#rsvpForm');
     frm.submit(function (e) {
+      $('#formSubmit').val('Sending...');
       $('.response').hide();
       $('#subject').val('Wedding RSVP from ' + $('#guests').val());
       $.ajax({
@@ -59,12 +60,14 @@
           data: frm.serialize(),
           dataType: 'json',
           success: function (data) {
+            $('#formSubmit').val('Success');
             $('#success').slideDown();
             setTimeout(function() {
               window.location = "/?rsvpSuccess=true";  
             }, 3000);
           },
           error: function (e) {
+            $('#formSubmit').val('Submit');
             $('#failure').slideDown();
           }
       });
