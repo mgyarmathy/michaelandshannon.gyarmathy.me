@@ -63,14 +63,19 @@ section {
 }
 
 .wedding {
-  background-color: $ivory;
+  background-image: linear-gradient(180deg, rgba($ivory, 0.85), rgba($ivory, 0.85) 25%), url('/img/building-sketch.jpg');
+  background-position: center bottom;
+  background-size: inherit;
+  background-attachment: inherit;
   h2 { color: $watermelon; }
-  // background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 20%), url('/img/thelaurel-traceyenochphotography.jpg');
-  // color: $white;
+}
+
+.what-to-wear {
+  background-color: $watermelon-light;  
 }
 
 .accommodations {
-  background-color: $watermelon-light;
+  background-color: $green-light;
 }
 
 .registry {
@@ -86,4 +91,26 @@ section {
 .footer {
   background-image: url('/img/ShannonMichael7258.jpg');
   min-height: 200px;
+}
+
+.rsvp {
+  background-image: linear-gradient(180deg, rgba($seaglass, 0.35), rgba($seaglass, 0.35) 50%), url('/img/xv.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: inherit;
+  height: 100vh;
+}
+
+.response {
+  font-size: 16px;
+}
+
+.button-primary {
+  background-color: $navy !important;
+  border-color: $navy !important;
+}
+
+input:disabled {
+  background-color: #eee;
+  &:hover{ cursor: not-allowed; }
 }

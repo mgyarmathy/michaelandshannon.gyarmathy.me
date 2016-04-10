@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Michael and Shannon</title>
+  <link rel="stylesheet" type="text/css" href="../css/i.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+</head>
+<body>
+<section class="rsvp">
+    <div class="container">
+        <div class="row">
+            <div class="eight columns offset-by-two card">
+                <h1 class="ct">RSVP</h1>
+                <form id="rsvpForm" action="https://formspree.io/mgyarmathy2011@gmail.com" method="POST">
+                  <input id="subject" type="hidden" name="_subject" value="Wedding RSVP" />
+                  <!-- <input type="hidden" name="_cc" value="shmiller29@gmail.com" /> -->
+                  <label>Guest(s)</label>
+                  <input id="guests" class="u-full-width" type="text" name="Guests" required>
+                  <label>Number Attending</label>
+                  <input id="numberAttending" type="number" name="NumberAttending" required>
+                  <br/>
+                  <label>Response</label>
+                  <label>
+                    <input id="accepts" type="radio" name="RSVP" value="accepts" checked>
+                    <span class="label-body">Accepts</span>
+                  </label>
+                  <label>
+                    <input id="regrets" type="radio" name="RSVP" value="regrets">
+                    <span class="label-body">Regrets</span>
+                  </label>
+                  <input type="text" name="_gotcha" style="display:none" />
+                  <input type="submit" class="button-primary" style="width: 50%; margin-top: 20px;">
+                </form>
+                <p class="response" id="success" style="display:none;">Your RSVP was sent successfully! Redirecting you back to the site...</p>
+                <p class="response" id="failure" style="display:none;">Your RSVP failed to send. Please try again!</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+  $(document).ready(function() {
+    
+    $('#accepts').click(function() {
+      $('#numberAttending').prop('disabled', false);
+    });
+
+    $('#regrets').click(function() {
+      $('#numberAttending').val(null);
+      $('#numberAttending').prop('disabled', true);
+    });
+
+    var frm = $('#rsvpForm');
+    frm.submit(function (e) {
+      $('.response').hide();
+      $('#subject').val('Wedding RSVP from ' + $('#guests').val());
+      $.ajax({
+          type: frm.attr('method'),
+          url: frm.attr('action'),
+          data: frm.serialize(),
+          dataType: 'json',
+          success: function (data) {
+            $('#success').slideDown();
+            setTimeout(function() {
+              window.location = "/?rsvpSuccess=true";  
+            }, 3000);
+          },
+          error: function (e) {
+            $('#failure').slideDown();
+          }
+      });
+      e.preventDefault();
+    });
+  });
+</script>
+</body>
+</html>

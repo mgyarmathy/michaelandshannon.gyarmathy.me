@@ -978,12 +978,10 @@ a {
   color: #2e2e2e;
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 3px solid #2e2e2e;
-  -webkit-transition: 0.25s linear;
-  transition: 0.25s linear; }
+  -webkit-transition: 0.15s linear;
+  transition: 0.15s linear; }
   a:hover {
-    color: #2e2e2e;
-    border-color: #2e2e2e; }
+    color: #FF6060; }
 
 .site-nav {
   position: fixed;
@@ -1077,12 +1075,20 @@ section {
   background-attachment: inherit; }
 
 .wedding {
-  background-color: #FFFFFA; }
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 250, 0.85)), color-stop(25%, rgba(255, 255, 250, 0.85))), url("/img/building-sketch.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 250, 0.85), rgba(255, 255, 250, 0.85) 25%), url("/img/building-sketch.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 250, 0.85), rgba(255, 255, 250, 0.85) 25%), url("/img/building-sketch.jpg");
+  background-position: center bottom;
+  background-size: inherit;
+  background-attachment: inherit; }
   .wedding h2 {
     color: #FF6060; }
 
+.what-to-wear {
+  background-color: #FFD7D6; }
+
 .accommodations {
-  background-color: #FFDFDF; }
+  background-color: #EFFBF4; }
 
 .registry {
   background-color: #FFFFFA; }
@@ -1096,3 +1102,24 @@ section {
 .footer {
   background-image: url("/img/ShannonMichael7258.jpg");
   min-height: 200px; }
+
+.rsvp {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(198, 236, 235, 0.35)), color-stop(50%, rgba(198, 236, 235, 0.35))), url("/img/xv.png");
+  background-image: -webkit-linear-gradient(top, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
+  background-image: linear-gradient(180deg, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: inherit;
+  height: 100vh; }
+
+.response {
+  font-size: 16px; }
+
+.button-primary {
+  background-color: #0E2D60 !important;
+  border-color: #0E2D60 !important; }
+
+input:disabled {
+  background-color: #eee; }
+  input:disabled:hover {
+    cursor: not-allowed; }
