@@ -21,7 +21,7 @@ gulp.task('sass', function () {
             includePaths: ['_sass'],
             onError: browserSync.notify
         }))
-        .pipe(prefix(['last 25 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({stream:true}));
 });

@@ -14,12 +14,16 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  @include breakpoint(one-hand) {
+    background-attachment: scroll;
+  }
   padding-top: 4em;
   padding-bottom: 4em;
 }
 
 .home {
   height: 100vh;
+  background-image: url('/img/ShannonMichael7219.jpg');
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) 20%), url('/img/ShannonMichael7219.jpg');
   background-position: center -18%;
   background-color: $black;
