@@ -135,6 +135,7 @@
   <script type="text/javascript">
   $(document).ready(function () {
     $('#read-more-button').click(function () {
+      $('#read-more-button').removeClass('show-mobile');
       $('#read-more-button').hide();
       $('.story p.hide-mobile').removeClass('hide-mobile');
     });
