@@ -171,7 +171,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   height: 0; }
@@ -280,7 +279,6 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -303,7 +301,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
@@ -377,7 +374,6 @@ th {
   margin: 0 auto;
   padding: 0 20px;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
 .column,
@@ -385,7 +381,6 @@ th {
   width: 100%;
   float: left;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
 @media (min-width: 400px) {
@@ -591,7 +586,6 @@ button {
   border: 1px solid #bbb;
   cursor: pointer;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
 input[type="submit"], input[type="reset"], input[type="button"] {
@@ -613,7 +607,6 @@ input[type="submit"], input[type="reset"], input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
 .button:hover,
@@ -681,7 +674,6 @@ input[type="email"], input[type="number"], input[type="search"], input[type="tex
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
 textarea,
@@ -695,7 +687,6 @@ select {
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
 input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
@@ -813,13 +804,11 @@ form {
 .u-full-width {
   width: 100%;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
 .u-max-full-width {
   max-width: 100%;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
 .u-pull-right {
@@ -990,7 +979,6 @@ a {
   text-decoration: none;
   font-weight: 600;
   -webkit-transition: 0.15s linear;
-  -o-transition: 0.15s linear;
   transition: 0.15s linear; }
   a:hover {
     color: #FF6060; }
@@ -1057,7 +1045,6 @@ section {
   background-image: url("/img/ShannonMichael7219.jpg");
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(20%, rgba(0, 0, 0, 0.4))), url("/img/ShannonMichael7219.jpg");
   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) 20%), url("/img/ShannonMichael7219.jpg");
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) 20%), url("/img/ShannonMichael7219.jpg");
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) 20%), url("/img/ShannonMichael7219.jpg");
   background-position: center -18%;
   background-color: #2e2e2e;
@@ -1099,7 +1086,6 @@ section {
   padding-bottom: 6em;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(198, 236, 235, 0.35)), color-stop(50%, rgba(198, 236, 235, 0.35))), url("/img/xv.png");
   background-image: -webkit-linear-gradient(top, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
-  background-image: -o-linear-gradient(top, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
   background-image: linear-gradient(180deg, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
   background-repeat: repeat;
   background-size: auto;
@@ -1108,7 +1094,6 @@ section {
 .wedding {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 250, 0.85)), color-stop(25%, rgba(255, 255, 250, 0.85))), url("/img/building-sketch.jpg");
   background-image: -webkit-linear-gradient(top, rgba(255, 255, 250, 0.85), rgba(255, 255, 250, 0.85) 25%), url("/img/building-sketch.jpg");
-  background-image: -o-linear-gradient(top, rgba(255, 255, 250, 0.85), rgba(255, 255, 250, 0.85) 25%), url("/img/building-sketch.jpg");
   background-image: linear-gradient(180deg, rgba(255, 255, 250, 0.85), rgba(255, 255, 250, 0.85) 25%), url("/img/building-sketch.jpg");
   background-position: center bottom;
   background-size: inherit;
@@ -1139,7 +1124,6 @@ section {
 .rsvp {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(198, 236, 235, 0.35)), color-stop(50%, rgba(198, 236, 235, 0.35))), url("/img/xv.png");
   background-image: -webkit-linear-gradient(top, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
-  background-image: -o-linear-gradient(top, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
   background-image: linear-gradient(180deg, rgba(198, 236, 235, 0.35), rgba(198, 236, 235, 0.35) 50%), url("/img/xv.png");
   background-repeat: repeat;
   background-size: auto;
