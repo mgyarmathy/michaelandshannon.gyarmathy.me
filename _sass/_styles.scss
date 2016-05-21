@@ -10,6 +10,18 @@
   background: $grey-light; /* Firefox */
 }
 
+nav {
+  @include breakpoint(one-hand) {
+    display: none;
+  }
+  position: fixed;
+  padding: 20px;
+  a {
+    display: block;
+    &.active { color: $watermelon; }
+  }
+}
+
 section {
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,7 +35,7 @@ section {
   padding-bottom: 4em;
 }
 
-.home {
+#home {
   height: 100vh;
   background-image: url('/img/ShannonMichael7219.jpg');
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4) 20%), url('/img/ShannonMichael7219.jpg');
@@ -60,7 +72,7 @@ section {
   }
 }
 
-.story {
+#story {
   background-color: $ivory;
   h3 { color: $watermelon; }
   p {
@@ -71,7 +83,7 @@ section {
   }
 }
 
-.save-the-date {
+#save-the-date {
   padding-top: 6em;
   padding-bottom: 6em;
   background-image: linear-gradient(180deg, rgba($seaglass, 0.35), rgba($seaglass, 0.35) 50%), url('/img/xv.png');
@@ -86,7 +98,7 @@ section {
   }
 }
 
-.wedding {
+#the-big-day {
   background-image: linear-gradient(180deg, rgba($ivory, 0.85), rgba($ivory, 0.85) 25%), url('/img/building-sketch.jpg');
   background-position: center bottom;
   background-size: inherit;
@@ -94,11 +106,11 @@ section {
   h2 { color: $watermelon; }
 }
 
-.what-to-wear {
+#what-to-wear {
   background-color: $watermelon-light;  
 }
 
-.accommodations {
+#accommodations {
   background-color: $green-light;
 
   @include breakpoint(one-hand) {
@@ -106,7 +118,7 @@ section {
   }
 }
 
-.registry {
+#registry {
   background-color: $ivory;
 }
 

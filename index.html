@@ -14,7 +14,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
 </head>
 <body>
-  <section class="home">
+  <nav>
+    <a href="#our-story">Our Story</a>
+    <a href="#save-the-date">Save The Date</a>
+    <a href="#the-big-day">The Big Day</a>
+    <a href="#accommodations">Accommodations</a>
+    <a href="#registry">Registry</a>
+  </nav>
+  <section id="home">
     <div class="header ct" style="line-height: 1;">
       <img class="logo" style="height: 55px" src="/img/logo.png">
       <br/>
@@ -25,7 +32,7 @@
     </div>
   </section>
   <a name="our-story"></a>
-  <section class="story">
+  <section id="our-story">
     <div class="container">
       <div class="row">
       <div class="ten columns offset-by-one jt">
@@ -45,7 +52,7 @@
     </div>
   </section>
   <a name="save-the-date"></a>
-  <section class="save-the-date">
+  <section id="save-the-date">
     <div class="container">
       <div class="row">
         <div class="ten columns offset-by-one ct">
@@ -56,7 +63,7 @@
     </div>
   </section>
   <a name="the-big-day"></a>
-  <section class="wedding">
+  <section id="the-big-day">
     <div class="container">
       <div class="row">
         <div class="ten columns offset-by-one ct">
@@ -85,8 +92,8 @@
       </div>
     </div>
   </section>
-  <!-- <a name="faqs"></a> -->
-<!--   <section class="what-to-wear">
+  <!-- <a name="what-to-wear"></a> -->
+<!--   <section id="what-to-wear">
     <div class="container">
       <div class="row">
         <div class="ten columns offset-by-one ct">
@@ -99,7 +106,7 @@
     </div>
   </section> -->
   <a name="accommodations"></a>
-  <section class="accommodations">
+  <section id="accommodations">
     <div class="container">
       <div class="row">
         <div class="ten columns offset-by-one ct">
@@ -119,7 +126,7 @@
     </div>
   </section>
   <a name="registry"></a>
-  <section class="registry">
+  <section id="registry">
     <div class="container">
       <div class="row">
         <div class="twelve columns ct">
@@ -166,7 +173,44 @@
       $('#read-more-button').hide();
       $('.story p.hide-mobile').removeClass('hide-mobile');
     });
+
+    $(document).on("scroll", onScroll);
+
+    $('nav a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
   });
+
+  function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('nav a').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if (refElement.position().top - 150 <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        $('nav a').removeClass("active");
+        currLink.addClass("active");
+      }
+      else{
+        currLink.removeClass("active");
+      }
+    });
+  }
   </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
